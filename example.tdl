@@ -1,0 +1,30 @@
+# tdl is a subset of tcl for storing structured data
+# Comments start with a hash sign
+
+# Scalar types
+set a 42
+set b 32.5
+set c false
+
+# $ referencing or escaping isn't supported
+# this will just give d the string value "$a"
+set d $a 
+
+# \$ just gives $
+# this will give the string value "$a"
+set d \$a 
+
+# \n gives a newline
+set g hello\nthere
+
+# String types
+set e "The answer is 42."
+
+# Again, referencing isn't supported
+set f "The answer is $a."
+
+# List types
+set amounts 10\ 33\ 18
+
+# Map
+set mydict [dict create a 1 b 2 c 3 d 4]

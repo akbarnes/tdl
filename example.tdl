@@ -28,14 +28,11 @@ set g The answer is 37.5
 set amounts list 10 33 18
 
 # list of other objects
-seti items 1 map a 2 b 3
-seti items 2 map a 7 c 77
+listset items 1 map a 2 b 3
+lset items 2 map a 7 c 77
 
 # hashmap
-set h map a 2 b 3 c 33.5
+set h hash a 2 b 3 c 33.5
 
-setk e a 32
-setk a b 37.5
-
-
-
+hashset e a 32
+hset a b 37.5

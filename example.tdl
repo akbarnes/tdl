@@ -20,41 +20,22 @@ set g hello\nthere
 # String types
 set e "The answer is 42."
 
-# Again, referencing isn't supported
-set f "The answer is $a."
-
 # quotes are optional
 set g The answer is 37.5
-
-# TCL List types
-# set amounts 10\ 33\ 18
 
 # list of scalars
 # list amounts 10 33 18
 set amounts list 10 33 18
 
 # list of other objects
-set amounts:1 list 7 5 8
-set amounts:2 list 7 8 9
-
-set items[1] map a 2 b 3
-set items[2] map a 7 c 23
-
 seti items 1 map a 2 b 3
 seti items 2 map a 7 c 77
 
-# TCL Map
-# set mydict [dict create a 1 b 2 c 3 d 4]
-
-# TOML-inspired map
+# hashmap
 set h map a 2 b 3 c 33.5
-
-set e.a 32
-set e.b 37.5
 
 setk e a 32
 setk a b 37.5
 
-list e.c 7 9 32
 
 

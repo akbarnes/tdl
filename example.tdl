@@ -2,15 +2,22 @@
 # Comments start with a hash sign
 
 # Scalar types
-set a 42
+
+# When the tdl parser encounters a value without set, 
+# it is returned immediately and the parser stops
+# This isn't supported in minimal tdl
+77.3
+
+# Variables with trailing underscores aren't returned
+# This is useful for intermediate values
+set a_ 42
 set b 32.5
 set c false
 
-# $ referencing or escaping isn't supported
-# this will just give d the string value "$a"
-set d $a 
+# $ referencing is supported
+set d $a_ 
 
-# \$ just gives $
+
 # this will give the string value "$a"
 set d \$a 
 
@@ -27,12 +34,26 @@ set g The answer is 37.5
 # list amounts 10 33 18
 set amounts list 10 33 18
 
+# add to a list
+list_cat amounts list 75 83 89
+
 # list of other objects
-listset items 1 map a 2 b 3
+
+# create an empty list
+set items list 
+list_append items 1 map a 2 b 3
+list_set items 1 map a 3 b 4
+lapp tems 2 map a 7 c 70
 lset items 2 map a 7 c 77
 
+
 # hashmap
+set h0 hash
 set h hash a 2 b 3 c 33.5
 
-hashset e a 32
+hash_set e a 32
 hset a b 37.5
+
+# Extended tidl
+set items[2,1] map a 7 b 5
+set h.a[3].b 7

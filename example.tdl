@@ -3,11 +3,6 @@
 
 # Scalar types
 
-# When the tdl parser encounters a value without set, 
-# it is returned immediately and the parser stops
-# This isn't supported in minimal tdl
-77.3
-
 # Variables with trailing underscores aren't returned
 # This is useful for intermediate values
 set a 42
@@ -63,6 +58,11 @@ clear a b c
 # Most importantly, nested indexing is possible
 set items[2,1] map a 7 b 5
 set h.a[3].b 7
+
+# When the tdl parser encounters a value without set, 
+# it is returned immediately and the parser stops
+# This isn't supported in minimal tdl
+77.3
 
 # The return keyword makes returning values explicit
 return 77.3

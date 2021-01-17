@@ -10,12 +10,12 @@
 
 # Variables with trailing underscores aren't returned
 # This is useful for intermediate values
-set a_ 42
+set a 42
 set b 32.5
 set c false
 
 # $ referencing is supported
-set d $a_ 
+set d $a
 
 
 # this will give the string value "$a"
@@ -54,6 +54,19 @@ set h hash a 2 b 3 c 33.5
 hash_set e a 32
 hset a b 37.5
 
+# intermediate variables are cleared
+clear a b c
+
 # Extended tidl
+# -------------------------------------------
+
+# Most importantly, nested indexing is possible
 set items[2,1] map a 7 b 5
 set h.a[3].b 7
+
+# The return keyword makes returning values explicit
+return 77.3
+
+# trailing underscore variables aren't returned
+set d_ 33
+set h.c $d_

@@ -23,10 +23,9 @@ Create a hash
 TCL $ evaluation is used to create nested data structures
 `set h2 hash a $amounts b $b`
 
-Variables with trailing understores aren't returned by the parser
+Intermediate variables can be cleared
 ```
-set d_ 32.7
-set h2 hash a $amounts d $d_
+clear b amounts
 ```
 
 

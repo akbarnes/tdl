@@ -1,7 +1,8 @@
 # Tool Data Language (TDL)
 
 TDL is a half-baked attempt by me to create a TOML-style data language 
-roughly based on TCL but with heavy influence from Racket.
+roughly based on TCL but with heavy influence from Racket. It's a bit
+like [dumbdown](https://github.com/treenotation/dumbdown) but for data.
 See [example.tdl](example.tdl) for a full example.
 
 To create a key-value pairs
